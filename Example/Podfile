@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '10.0'
+
+target 'HZToolLib_Example' do
+  pod 'HZToolLib', :path => '../'
+
+  target 'HZToolLib_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
