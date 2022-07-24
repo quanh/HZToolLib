@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'HZToolLib'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of HZToolLib.'
+  s.summary          = 'ioser develop tool.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,17 +18,18 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+ my develop tool of ios , UI 、 Extension and ....
                        DESC
 
-  s.homepage         = 'https://github.com/quanhai/HZToolLib'
+  s.homepage         = 'https://github.com/quanh/HZToolLib'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'quanhai' => '1053713445@qq.com' }
-  s.source           = { :git => 'https://github.com/quanhai/HZToolLib.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/quanh/HZToolLib.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '10.0'
+  s.ios.deployment_target = '11.0'
+  s.swift_version = '5.0'
 
   s.source_files = 'HZToolLib/Classes/**/*'
   
@@ -38,5 +39,10 @@ TODO: Add long description of the pod here.
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.dependency 'Moya'
+  s.dependency 'SnapKit'
+  s.dependency 'Result'
+  s.dependency 'YYImage'
+  s.dependency 'HandyJSON'
+  s.dependency 'JXSegmentedView'
 end

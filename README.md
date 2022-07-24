@@ -20,6 +20,11 @@ it, simply add the following line to your Podfile:
 pod 'HZToolLib'
 ```
 
+```
+import objc header in bridging-header
+#import "HZToolHeader.h"
+```
+
 ## Author
 
 quanhai, 1053713445@qq.com
