@@ -9,7 +9,6 @@ import Foundation
 import UIKit
 
 extension CGSize{
-    
     /** 在 containerSize 中按原比例充满， 返回缩放后的正确size */
     func ajust(into containerSize: CGSize = .zero) -> CGSize{
         guard containerSize != .zero else{

@@ -82,22 +82,96 @@ extension UIColor{
 		self.init(red: red, green: green, blue: blue, alpha: alpha)
 	}
 	
-		var hz_red: CGFloat {
-			var r: CGFloat = 0
-			getRed(&r, green: nil, blue: nil, alpha: nil)
-			return r
-		}
-		var hz_green: CGFloat {
-			var g: CGFloat = 0
-			getRed(nil, green: &g, blue: nil, alpha: nil)
-			return g
-		}
-		var hz_blue: CGFloat {
-			var b: CGFloat = 0
-			getRed(nil, green: nil, blue: &b, alpha: nil)
-			return b
-		}
-		var hz_alpha: CGFloat {
-			return cgColor.alpha
-		}
+    /// 16进制字符串转颜色
+    /// - Parameter hex: 16进制字符串
+    convenience init(hex: String) {
+            var colorString = hex.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines).uppercased()
+            
+            /// 如果字符串不符合长度要求则返回默认颜色
+            if colorString.count < 6 {
+                self.init(red: 0, green: 0, blue: 0, alpha: 1.0)
+                return
+            }
+            
+            /// 截取后面的颜色字符数据
+            if colorString.hasPrefix("0x") || colorString.hasPrefix("0X"){
+                colorString = (colorString as NSString).substring(from: 2)
+            }
+            if colorString.hasPrefix("#") {
+                colorString = (colorString as NSString).substring(from: 1)
+            }
+            
+            /// 判断截取后的颜色字符串长度
+            if colorString.count < 6 {
+                self.init(red: 0, green: 0, blue: 0, alpha: 1.0)
+                return
+            }
+            
+            var rang = NSRange()
+            rang.location = 0
+            rang.length = 2
+            
+            /// 处理六位字符串长度，即没有透明度。否则处理包含字符透明度。
+            if colorString.count == 6 {
+                let rString = (colorString as NSString).substring(with: rang)
+                rang.location = 2
+                let gString = (colorString as NSString).substring(with: rang)
+                rang.location = 4
+                let bString = (colorString as NSString).substring(with: rang)
+           
+                var r:UInt64 = 0, g:UInt64 = 0,b: UInt64 = 0
+                
+                Scanner(string: rString).scanHexInt64(&r)
+                Scanner(string: gString).scanHexInt64(&g)
+                Scanner(string: bString).scanHexInt64(&b)
+
+                let red = CGFloat(r) / 255.0
+                let green = CGFloat(g) / 255.0
+                let blue = CGFloat(b) / 255.0
+
+                self.init(red: red, green: green, blue: blue, alpha: 1)
+            } else {
+                let aString = (colorString as NSString).substring(with: rang)
+                rang.location = 2
+                let rString = (colorString as NSString).substring(with: rang)
+                rang.location = 4
+                let gString = (colorString as NSString).substring(with: rang)
+                rang.location = 6
+                let bString = (colorString as NSString).substring(with: rang)
+
+                var r:UInt64 = 0, g:UInt64 = 0,b: UInt64 = 0, a: UInt64 = 0
+                
+                Scanner(string: rString).scanHexInt64(&r)
+                Scanner(string: gString).scanHexInt64(&g)
+                Scanner(string: bString).scanHexInt64(&b)
+                
+                Scanner(string: aString).scanHexInt64(&a)
+                
+                let red = CGFloat(r) / 255.0
+                let green = CGFloat(g) / 255.0
+                let blue = CGFloat(b) / 255.0
+                let alp = CGFloat(a) / 255.0
+
+                self.init(red: red, green: green, blue: blue, alpha: alp)
+            }
+        }
+    
+    var hz_red: CGFloat {
+        var r: CGFloat = 0
+        getRed(&r, green: nil, blue: nil, alpha: nil)
+        return r
+    }
+    var hz_green: CGFloat {
+        var g: CGFloat = 0
+        getRed(nil, green: &g, blue: nil, alpha: nil)
+        return g
+    }
+    var hz_blue: CGFloat {
+        var b: CGFloat = 0
+        getRed(nil, green: nil, blue: &b, alpha: nil)
+        return b
+    }
+    var hz_alpha: CGFloat {
+        return cgColor.alpha
+    }
 }

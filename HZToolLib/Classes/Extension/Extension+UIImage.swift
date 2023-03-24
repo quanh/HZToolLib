@@ -175,3 +175,106 @@ extension UIImage {
 		return image.resized(to: CGSize(width: estimateWidthHeight, height: estimateWidthHeight))
 	}
 }
+
+extension UIImage{
+    func flip() -> UIImage{
+        UIGraphicsBeginImageContextWithOptions(self.size, false, UIScreen.main.scale)
+        let ctx = UIGraphicsGetCurrentContext()
+        ctx?.scaleBy(x: -1, y: 1)
+        ctx?.translateBy(x: -self.size.width, y: 0)
+        self.draw(in: CGRect(origin: .zero, size: self.size))
+        let image:UIImage = UIGraphicsGetImageFromCurrentImageContext()!
+        UIGraphicsEndImageContext()
+        return image
+    }
+    
+    func roundedCorners(radius: CGFloat? = nil, corners: UIRectCorner = .allCorners) -> UIImage? {
+        let maxRadius = min(size.width, size.height) / 2
+        let cornerRadius: CGFloat
+        if let radius = radius, radius > 0 && radius <= maxRadius {
+            cornerRadius = radius
+        } else {
+            cornerRadius = maxRadius
+        }
+
+        UIGraphicsBeginImageContextWithOptions(size, false, scale)
+
+        let rect = CGRect(origin: .zero, size: size)
+        UIBezierPath(roundedRect: rect, byRoundingCorners: corners, cornerRadii: CGSize(width: cornerRadius, height: cornerRadius)).addClip()
+        draw(in: rect)
+
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return image
+    }
+    
+    static func gradientImage(_ type: HZGradientType?, estimateSize: CGSize = CGSize(width: 1, height: 1)) -> UIImage?{
+        guard let type = type else{
+            return nil
+        }
+        
+        var hzColors: [UIColor]?
+        var hzLocations: [CGFloat]?
+        var startPoint: CGPoint = .zero
+        var endPoint: CGPoint = .zero
+        
+        switch type {
+        case .topToBottom(let colors, let locations):
+            hzColors = colors
+            hzLocations = locations
+            startPoint = CGPoint(x: 0.5, y: 0)
+            endPoint = CGPoint(x: 0.5, y: 1)
+        case .leftToRight(let colors, let locations):
+            hzColors = colors
+            hzLocations = locations
+            startPoint = CGPoint(x: 0, y: 0.5)
+            endPoint = CGPoint(x: 1, y: 0.5)
+        case .topLeftToBottomRight(let colors, let locations):
+            hzColors = colors
+            hzLocations = locations
+            startPoint = CGPoint(x: 0, y: 0)
+            endPoint = CGPoint(x: 1, y: 1)
+        case .bottomLeftToTopRight(let colors, let locations):
+            hzColors = colors
+            hzLocations = locations
+            startPoint = CGPoint(x: 0, y: 1)
+            endPoint = CGPoint(x: 1, y: 0)
+        case .custom(let colors, let locations, let sPoint, let ePoint):
+            hzColors = colors
+            hzLocations = locations
+            startPoint = sPoint
+            endPoint = ePoint
+        }
+        
+        let colors = hzColors?.map({ return $0.cgColor }) ?? []
+        if hzLocations?.count ?? 0 == 0{
+            hzLocations = [0, 1]
+        }
+        
+        let layer = CAGradientLayer()
+        layer.frame = CGRect(x: 0, y: 0, width: estimateSize.width, height: estimateSize.height)
+        layer.colors = colors
+        layer.locations = hzLocations?.map({ return NSNumber(value: $0) })
+        layer.startPoint = startPoint
+        layer.endPoint = endPoint
+        
+        
+        UIGraphicsBeginImageContextWithOptions(estimateSize, false, 0)
+        guard let context = UIGraphicsGetCurrentContext() else {
+            return nil
+        }
+        layer.render(in: context)
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return image
+    }
+}
+
+
+enum HZGradientType{
+    case leftToRight(colors: [UIColor]?, locations: [CGFloat]?)
+    case topToBottom(colors: [UIColor]?, locations: [CGFloat]?)
+    case topLeftToBottomRight(colors: [UIColor]?, locations: [CGFloat]?)
+    case bottomLeftToTopRight(colors: [UIColor]?, locations: [CGFloat]?)
+    case custom(colors: [UIColor]?, locations: [CGFloat]?, startPoint: CGPoint, endPoint: CGPoint)
+}

@@ -110,6 +110,15 @@
 		6560941EA3BA8DE27422A39F7DE9DD8F /* ConstraintAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017B3929BA77539F5157EC24E0DA3546 /* ConstraintAttributes.swift */; };
 		66326BA333C5E1E09B21D1EBBCD76A2A /* ConstraintMakerRelatable+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 013CECFF4E9E3775EEA1410F57C2D839 /* ConstraintMakerRelatable+Extensions.swift */; };
 		66AD96DFA2D19F1E0C90E5B68930F7BD /* EnumTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F3C4CAFF1E984E33171914FC15D17F /* EnumTransform.swift */; };
+		66C8F02229CD4C43006784BC /* HZLoger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C8F02129CD4C43006784BC /* HZLoger.swift */; };
+		66C8F02429CD4C8C006784BC /* Extension+Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C8F02329CD4C8C006784BC /* Extension+Date.swift */; };
+		66C8F02629CD508E006784BC /* UIView+Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C8F02529CD508E006784BC /* UIView+Line.swift */; };
+		66C8F02929CD5515006784BC /* HZBlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C8F02829CD5515006784BC /* HZBlurView.swift */; };
+		66C8F02B29CD55A3006784BC /* HZCustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C8F02A29CD55A3006784BC /* HZCustomButton.swift */; };
+		66C8F02D29CD55F5006784BC /* HZAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C8F02C29CD55F5006784BC /* HZAlertView.swift */; };
+		66C8F02F29CD570A006784BC /* HZHighlightText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C8F02E29CD570A006784BC /* HZHighlightText.swift */; };
+		66C8F03129CD575C006784BC /* Extension+Attr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C8F03029CD575C006784BC /* Extension+Attr.swift */; };
+		66C8F03329CD57D1006784BC /* HZShimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C8F03229CD57D1006784BC /* HZShimerView.swift */; };
 		66FB7FC693A42C86BD8A899C2B32C5F3 /* MoyaProvider+Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3901E20FF84796591D95CC0F5D79F5 /* MoyaProvider+Defaults.swift */; };
 		6779224FAE89604D4CD3047449949998 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B812E2F2A302524EE3847E6C02BFDC /* Result.swift */; };
 		68E079A9B50AB6F4314D0C141A977634 /* CustomDateFormatTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6668AC471622F12167A964F1F0E4CF90 /* CustomDateFormatTransform.swift */; };
@@ -442,7 +451,7 @@
 		120F156694F90DE49F86BC6274648920 /* UIWindow+Screen.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIWindow+Screen.swift"; sourceTree = "<group>"; };
 		127DF1F8A9B005F7D62DD851BA4946EF /* Container.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Container.swift; sourceTree = "<group>"; };
 		1402D591111DC5F85AF51FAA3292D135 /* ConstraintConstantTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintConstantTarget.swift; path = Sources/ConstraintConstantTarget.swift; sourceTree = "<group>"; };
-		14939488C81769FBD7798495AA3F3B67 /* UIImageHelper.mm */ = {isa = PBXFileReference; includeInIndex = 1; path = UIImageHelper.mm; sourceTree = "<group>"; };
+		14939488C81769FBD7798495AA3F3B67 /* UIImageHelper.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; path = UIImageHelper.mm; sourceTree = "<group>"; };
 		166152C804689DA288FFE7097EAC513B /* DrawColors.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DrawColors.swift; sourceTree = "<group>"; };
 		1673F7DA63B7DB0828F18B873C012B63 /* HZToolHeader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HZToolHeader.h; path = HZToolLib/Classes/HZToolHeader.h; sourceTree = "<group>"; };
 		18B07993502407CE5348B66935AC5406 /* SystemHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SystemHelper.swift; sourceTree = "<group>"; };
@@ -538,7 +547,7 @@
 		5D797E9A5C5782CE845840781FA1CC81 /* Alamofire */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Alamofire; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EE600C8FE2B2B4342A62E98767464CF /* Pods-HZToolLib_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HZToolLib_Tests-Info.plist"; sourceTree = "<group>"; };
 		5F6CA0892735AD9C99C8F296C2E23091 /* HandyJSON-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "HandyJSON-Info.plist"; sourceTree = "<group>"; };
-		5FC45C30245DB943D2F7DA8AB5287A17 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		5FC45C30245DB943D2F7DA8AB5287A17 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		60A563E81388208546FD50387D8F8036 /* JXSegmentedBaseItemModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JXSegmentedBaseItemModel.swift; path = Sources/Core/JXSegmentedBaseItemModel.swift; sourceTree = "<group>"; };
 		60C19523130B28F8D83B64842D6FC1C6 /* YYImage-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "YYImage-Info.plist"; sourceTree = "<group>"; };
 		60E68399D617E984FEEAAC058ED4D169 /* BaseViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -552,6 +561,15 @@
 		6668AC471622F12167A964F1F0E4CF90 /* CustomDateFormatTransform.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CustomDateFormatTransform.swift; path = Source/CustomDateFormatTransform.swift; sourceTree = "<group>"; };
 		6696F358CEEDF009CC181765C9998DF7 /* YYImage-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "YYImage-prefix.pch"; sourceTree = "<group>"; };
 		66C2C760DAA407896A7AA1E80F7CAC15 /* Moya+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Moya+Alamofire.swift"; path = "Sources/Moya/Moya+Alamofire.swift"; sourceTree = "<group>"; };
+		66C8F02129CD4C43006784BC /* HZLoger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HZLoger.swift; sourceTree = "<group>"; };
+		66C8F02329CD4C8C006784BC /* Extension+Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Date.swift"; sourceTree = "<group>"; };
+		66C8F02529CD508E006784BC /* UIView+Line.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Line.swift"; sourceTree = "<group>"; };
+		66C8F02829CD5515006784BC /* HZBlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HZBlurView.swift; sourceTree = "<group>"; };
+		66C8F02A29CD55A3006784BC /* HZCustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HZCustomButton.swift; sourceTree = "<group>"; };
+		66C8F02C29CD55F5006784BC /* HZAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HZAlertView.swift; sourceTree = "<group>"; };
+		66C8F02E29CD570A006784BC /* HZHighlightText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HZHighlightText.swift; sourceTree = "<group>"; };
+		66C8F03029CD575C006784BC /* Extension+Attr.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Attr.swift"; sourceTree = "<group>"; };
+		66C8F03229CD57D1006784BC /* HZShimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HZShimerView.swift; sourceTree = "<group>"; };
 		69F71E8818E76C4647F6EAEAA28CB70D /* PropertyInfo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PropertyInfo.swift; path = Source/PropertyInfo.swift; sourceTree = "<group>"; };
 		69FEF89C711DC68D9A112501AB0C1A80 /* EmptyDataSet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EmptyDataSet.swift; sourceTree = "<group>"; };
 		6B1963672AF714394E252C193F209DDA /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/ImageIO.framework; sourceTree = DEVELOPER_DIR; };
@@ -561,7 +579,7 @@
 		718F772C036C7082812DF1370C0897B5 /* JXSegmentedView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JXSegmentedView-umbrella.h"; sourceTree = "<group>"; };
 		726532E3BBE0E448534883B11CF33BA5 /* URLRequest+Encoding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "URLRequest+Encoding.swift"; path = "Sources/Moya/URLRequest+Encoding.swift"; sourceTree = "<group>"; };
 		73009C3BA1F0E779C6B83551924F7A03 /* YYImage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YYImage.h; path = YYImage/YYImage.h; sourceTree = "<group>"; };
-		7375854038C986F8C0E704A1CBDED391 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		7375854038C986F8C0E704A1CBDED391 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		7402FE25926EECC872C2C237FF3A180B /* Moya-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Moya-prefix.pch"; sourceTree = "<group>"; };
 		7435FC88745A0107B87DE57E6AECA291 /* AFError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AFError.swift; path = Source/AFError.swift; sourceTree = "<group>"; };
 		74A265ECB28A191EBC482EF222B2FC15 /* Protected.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Protected.swift; path = Source/Protected.swift; sourceTree = "<group>"; };
@@ -610,7 +628,7 @@
 		98008BD70D00C312E6F80E441FDF5572 /* YYImage.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = YYImage.debug.xcconfig; sourceTree = "<group>"; };
 		9B1DD78861963ECD8F354196323E452C /* NetworkReachabilityManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkReachabilityManager.swift; path = Source/NetworkReachabilityManager.swift; sourceTree = "<group>"; };
 		9D044859035BAFDED35DCDCB3B6D830F /* JXSegmentedView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JXSegmentedView.debug.xcconfig; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9DFEA64AD97439A123AF5F42F7BDBCFC /* JXSegmentedTitleDataSource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JXSegmentedTitleDataSource.swift; path = Sources/Title/JXSegmentedTitleDataSource.swift; sourceTree = "<group>"; };
 		9E188EB00493DB4100B82AF47B395592 /* StringMatchManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StringMatchManager.swift; sourceTree = "<group>"; };
 		9E4FB6414F8CF885C9989DC4A5B54907 /* UIImage+Helper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIImage+Helper.h"; sourceTree = "<group>"; };
@@ -665,7 +683,7 @@
 		C4073DAFF979B8C9819E88E46AE6E278 /* Deserializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Deserializer.swift; path = Source/Deserializer.swift; sourceTree = "<group>"; };
 		C41E367F3E101CB9D9E8D17FCE6A2CA5 /* Metadata.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Metadata.swift; path = Source/Metadata.swift; sourceTree = "<group>"; };
 		C42336A8B48A8A04D931D8133D8805DE /* RequestTypeWrapper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RequestTypeWrapper.swift; path = Sources/Moya/RequestTypeWrapper.swift; sourceTree = "<group>"; };
-		C58FEC97643543BAEE5F0D611C37DF5D /* HZToolLib.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = HZToolLib.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		C58FEC97643543BAEE5F0D611C37DF5D /* HZToolLib.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = HZToolLib.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		C6DFFAA46533B56A4C7BA009FC4450EE /* CacheHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CacheHandler.swift; sourceTree = "<group>"; };
 		C7D00742477D53743C79A82C7110115A /* Moya-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Moya-Info.plist"; sourceTree = "<group>"; };
 		C84F21CE25C3633A49C0BD4D28E92B62 /* Alamofire-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-umbrella.h"; sourceTree = "<group>"; };
@@ -861,6 +879,7 @@
 				827C637C852EBE102FF59E168FBC1207 /* LocalDocumentManager.swift */,
 				E0E178218AAABE624EF90AFA71633F7F /* SwiftClass.swift */,
 				18B07993502407CE5348B66935AC5406 /* SystemHelper.swift */,
+				66C8F02129CD4C43006784BC /* HZLoger.swift */,
 			);
 			name = Helper;
 			path = HZToolLib/Classes/Helper;
@@ -911,9 +930,12 @@
 				14939488C81769FBD7798495AA3F3B67 /* UIImageHelper.mm */,
 				DC911ADDC0E738BA31C7A8601B9E3935 /* UIView+ajustment.swift */,
 				24C97FBCF74BA9E0B292F50815E59F34 /* UIView+Capture.swift */,
+				66C8F02529CD508E006784BC /* UIView+Line.swift */,
 				120F156694F90DE49F86BC6274648920 /* UIWindow+Screen.swift */,
 				BEE2CBE54C56BF6BC305D9C17CAAFB0A /* YYAnimatedImageView+Display.h */,
 				71882E1F7B4E343FA4433A7BA48F2B6F /* YYAnimatedImageView+Display.m */,
+				66C8F02329CD4C8C006784BC /* Extension+Date.swift */,
+				66C8F03029CD575C006784BC /* Extension+Attr.swift */,
 			);
 			name = Extension;
 			path = HZToolLib/Classes/Extension;
@@ -954,7 +976,6 @@
 			children = (
 				5258B49386B1790C134CC559D8E7540D /* MutiSectionCollectionViewFlowLayout.swift */,
 			);
-			name = Layouts;
 			path = Layouts;
 			sourceTree = "<group>";
 		};
@@ -1030,7 +1051,6 @@
 				CF7A88BBA681A53A57CC7A2492BBD570 /* NB.swift */,
 				4B941C129F3B1E5561132FEE47D6083F /* UIViewController+NavigationBar.swift */,
 			);
-			name = CustomNavBar;
 			path = CustomNavBar;
 			sourceTree = "<group>";
 		};
@@ -1109,7 +1129,6 @@
 				A0438E3BB3B9AEDE141248FF75F299B3 /* Validation.swift */,
 				CB5C63861123A9C2122CFD6F2FFBDCE4 /* Support Files */,
 			);
-			name = Alamofire;
 			path = Alamofire;
 			sourceTree = "<group>";
 		};
@@ -1161,7 +1180,6 @@
 				41226D7092612B58BCEF3BDABC44F4FB /* JXSegmentedViewTool.swift */,
 				39831AB6432146B13E86A80060EC9C94 /* Support Files */,
 			);
-			name = JXSegmentedView;
 			path = JXSegmentedView;
 			sourceTree = "<group>";
 		};
@@ -1206,7 +1224,6 @@
 				8B2DCC420C5A7EAC3A13D2864C316FEC /* URLTransform.swift */,
 				9880810D32B9F773177096813B376DB3 /* Support Files */,
 			);
-			name = HandyJSON;
 			path = HandyJSON;
 			sourceTree = "<group>";
 		};
@@ -1231,7 +1248,6 @@
 				B820486980C3ED549FD857FC97ECD3B0 /* EmptyDataSetView.swift */,
 				374C1797A250A9CA58A3B2D7C45F3D18 /* EmptyDataSetView+Extension.swift */,
 			);
-			name = Empty;
 			path = Empty;
 			sourceTree = "<group>";
 		};
@@ -1369,7 +1385,6 @@
 				A99A8AB080562DFE34D0C4D11B107473 /* Core */,
 				1C6B966B2B85D969067D56572F6B92AC /* Support Files */,
 			);
-			name = Moya;
 			path = Moya;
 			sourceTree = "<group>";
 		};
@@ -1411,7 +1426,6 @@
 				B2BF5E5B97D7DAC09614F9B1000347E0 /* Toast+Ex.swift */,
 				473F7C73A28CC9123EEAB453791E2B58 /* ToastProgressView.swift */,
 			);
-			name = Toast;
 			path = Toast;
 			sourceTree = "<group>";
 		};
@@ -1436,7 +1450,6 @@
 				DB361854DAA10C288331602F28FB4C92 /* ResultProtocol.swift */,
 				A708A51510F8F7FCF4D9A967174CDD08 /* Support Files */,
 			);
-			name = Result;
 			path = Result;
 			sourceTree = "<group>";
 		};
@@ -1446,16 +1459,20 @@
 				502D61F36A6C574799125CDF5588A0BC /* Core */,
 				37E8BA22F4E458BD0C2505741532BCA8 /* Support Files */,
 			);
-			name = YYImage;
 			path = YYImage;
 			sourceTree = "<group>";
 		};
 		F436C86887A4986C9718E276110CBD42 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				66C8F02829CD5515006784BC /* HZBlurView.swift */,
 				F9B4553111CB6A7E0243930C09878624 /* Extension+UISlider.swift */,
 				2C69E8A99D7511852BAF4A794465C849 /* Layouts */,
 				CD1F1D90B760A28989CD12A5E0EF2052 /* Toast */,
+				66C8F02A29CD55A3006784BC /* HZCustomButton.swift */,
+				66C8F02C29CD55F5006784BC /* HZAlertView.swift */,
+				66C8F02E29CD570A006784BC /* HZHighlightText.swift */,
+				66C8F03229CD57D1006784BC /* HZShimerView.swift */,
 			);
 			name = UI;
 			path = HZToolLib/Classes/UI;
@@ -1521,7 +1538,6 @@
 				4FBB83C5E8D1EC0182D92084CFC1B9F2 /* UILayoutSupport+Extensions.swift */,
 				1B8E37AF912B65CE61A2D8C2FE1045BD /* Support Files */,
 			);
-			name = SnapKit;
 			path = SnapKit;
 			sourceTree = "<group>";
 		};
@@ -1951,13 +1967,16 @@
 				FF45FC2FE323E9325F77FC92B5198E67 /* EmptyDataSetView.swift in Sources */,
 				366CF91604E303AFF26A5C9D54A3EDCA /* EmptyDataSetView+Extension.swift in Sources */,
 				7416CF4665D66C78654415F2164965E3 /* Extension+Array.swift in Sources */,
+				66C8F03129CD575C006784BC /* Extension+Attr.swift in Sources */,
 				3857D9475C584A1C7218A8BA4F7F11C8 /* Extension+String.swift in Sources */,
 				7AEA860F8476E5A4DD43E614E7C62739 /* Extension+UIColor.swift in Sources */,
 				1D19151EE29E841B59BADEBDF154AB93 /* Extension+UIFont.swift in Sources */,
 				F5AAEAE343DBDF3483847F862096AAD1 /* Extension+UIImage.swift in Sources */,
 				C6BD86B5D39FE395C14BB921373E069A /* Extension+UISlider.swift in Sources */,
+				66C8F02629CD508E006784BC /* UIView+Line.swift in Sources */,
 				4311886A9500C79D024E019ACCAB0AC7 /* GifGenerator.swift in Sources */,
 				213A857BC1C4C2C35823AB6C4ACE8782 /* HZToolLib-dummy.m in Sources */,
+				66C8F02429CD4C8C006784BC /* Extension+Date.swift in Sources */,
 				60B218AC7C4186BC739A032F75EFA940 /* InputConstant.swift in Sources */,
 				D9C68312A9748D6697A4FFA99F3D8979 /* InputInspectable.swift in Sources */,
 				731D227B2DFE0986CFF100258DE3A942 /* LocalDocumentManager.swift in Sources */,
@@ -1967,16 +1986,22 @@
 				88B3F471B5180329FB41037C93DD27E5 /* Number+Ex.swift in Sources */,
 				7B3E7B47DF34D9205F61496E8C3F125B /* StringMatchManager.swift in Sources */,
 				13F468526316459C0133D88830E43FA2 /* StyleColorCollectionCell.swift in Sources */,
+				66C8F02F29CD570A006784BC /* HZHighlightText.swift in Sources */,
 				E55051E0B44476EB688EA78BE84EE889 /* SwiftClass.swift in Sources */,
 				A22D12FC3FDEC24B9442837FA1381306 /* SystemHelper.swift in Sources */,
 				51EA5E2EDAA0FA86A10182CB836744F6 /* Toast.swift in Sources */,
 				D5FA9EE3CE1A452D8416F241B895D515 /* Toast+Ex.swift in Sources */,
+				66C8F02B29CD55A3006784BC /* HZCustomButton.swift in Sources */,
+				66C8F02D29CD55F5006784BC /* HZAlertView.swift in Sources */,
+				66C8F03329CD57D1006784BC /* HZShimerView.swift in Sources */,
+				66C8F02229CD4C43006784BC /* HZLoger.swift in Sources */,
 				C807985AF90572087EBDD67F1EFB32EA /* ToastProgressView.swift in Sources */,
 				45533AE152FE10DDFD93FBEFF18D5369 /* UIBezierPath+TextPath.m in Sources */,
 				E770B29105C6F81261554DC855B8322A /* UIControl+Ex.swift in Sources */,
 				0219E50A5C0A1CBFEE198AE1F577B648 /* UIFont+Dynamic.m in Sources */,
 				A909030DF054E1F97427DE26D35E95A1 /* UIImage+Helper.m in Sources */,
 				8DF3EC37749E9EC4C4957F9773C919CD /* UIImage+Helper.swift in Sources */,
+				66C8F02929CD5515006784BC /* HZBlurView.swift in Sources */,
 				6A54C9E43524B48CCB8167E977F70C7D /* UIImageHelper.mm in Sources */,
 				B6C4F169D37CC083288A8205616191E1 /* UIView+ajustment.swift in Sources */,
 				7CC90345F32346361734C65FC0CE9CCE /* UIView+Capture.swift in Sources */,
@@ -2782,8 +2807,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};

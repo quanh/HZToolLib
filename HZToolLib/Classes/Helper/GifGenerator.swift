@@ -44,7 +44,7 @@ import AVFoundation
 				
 				if CGImageDestinationFinalize(imageDestination) {
 					
-					print("animated GIF file created at ", destinationURL)
+					hzprint("animated GIF file created at ", destinationURL)
 					
 					do {
 						let attr = try FileManager.default.attributesOfItem(atPath: destinationURL.path) as NSDictionary

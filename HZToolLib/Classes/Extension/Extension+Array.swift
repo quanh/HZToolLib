@@ -23,7 +23,7 @@ extension Array where Element: Equatable {
 extension Collection{
 	func serializationToString() -> String?{
 		if (!JSONSerialization.isValidJSONObject(self)){
-			print("无法解析")
+			hzprint("无法解析")
 			return nil
 		}
 		if let data = try? JSONSerialization.data(withJSONObject: self, options: []){

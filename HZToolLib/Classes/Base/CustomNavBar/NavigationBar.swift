@@ -11,8 +11,7 @@ import UIKit
 
 extension UIStackView{
     func removeAllArrangedView(){
-        for view in self.arrangedSubviews{
-            self.removeArrangedSubview(view)
+        for view in arrangedSubviews{
             view.removeFromSuperview()
         }
     }
@@ -23,7 +22,7 @@ public class NavigationBarAppearance{
     public static let appearance = NavigationBarAppearance()
     private init(){}
     
-    public var titleAttribute : [NSAttributedString.Key : Any] = [NSAttributedString.Key.font:UIFont.pingFang(fontSize: 16, style: .semibold), NSAttributedString.Key.foregroundColor:UIColor.white]
+    public var titleAttribute : [NSAttributedString.Key : Any] = [NSAttributedString.Key.font: UIFont.hzFont(font: .PingFangSC(weight: .medium, size: 16)), NSAttributedString.Key.foregroundColor:UIColor.white]
     public var itemAttribute : [NSAttributedString.Key : Any] = [NSAttributedString.Key.font:UIFont.systemFont(ofSize: 15),NSAttributedString.Key.foregroundColor:UIColor.white]
     
     /// 左边的items离左边的距离
